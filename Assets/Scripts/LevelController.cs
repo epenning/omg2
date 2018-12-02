@@ -12,14 +12,17 @@ public class LevelController : MonoBehaviour {
 	public void SpawnNextLevel(Level currentLevel)
     {
         Vector3 newPosition = GetNewPosition(currentLevel);
-        GameObject obstacle = PickObstacle();
+        GameObject obstaclePrefab = PickObstacle();
 
-        Level nextLevel = new Level(newPosition, planePrefab, obstacle);
+        GameObject nextLevelRoot = new GameObject("Level");
+        nextLevelRoot.transform.SetPositionAndRotation(newPosition, Quaternion.identity);
+        Level nextLevel = nextLevelRoot.AddComponent<Level>();
+        nextLevel.CreateLevel(planePrefab, obstaclePrefab);
     }
 
     public Vector3 GetNewPosition(Level currentLevel)
     {
-        Vector3 oldPosition = currentLevel.root.transform.position;
+        Vector3 oldPosition = currentLevel.transform.position;
         float length = 10 * currentLevel.plane.transform.localScale.z;
         return new Vector3(oldPosition.x, oldPosition.y, oldPosition.z + length);
     }

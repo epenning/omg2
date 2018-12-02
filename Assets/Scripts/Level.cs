@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class Level : MonoBehaviour {
 
-    public GameObject root;
     public GameObject plane;
     public GameObject obstacle;
 
-    public Level(Vector3 position, GameObject planePrefab, GameObject obstaclePrefab)
+    public void CreateLevel(GameObject planePrefab, GameObject obstaclePrefab)
     {
-        root = Object.Instantiate(new GameObject("Level"), position, Quaternion.identity);
-        MakePlane(planePrefab);
+        if (plane == null)
+        {
+            MakePlane(planePrefab);
+        }
 
         if (obstaclePrefab)
         {
-            obstacle = Object.Instantiate(obstaclePrefab, root.transform);
+            obstacle = Object.Instantiate(obstaclePrefab, transform);
         }
     }
 
     private void MakePlane(GameObject planePrefab)
     {
-        plane = Object.Instantiate(planePrefab, root.transform);
+        plane = Object.Instantiate(planePrefab, transform);
         LoopingPlane loopingPlane = plane.GetComponent<LoopingPlane>();
         loopingPlane.level = this;
     }
 
     public void RemoveLevel()
     {
-        Object.Destroy(root);
+        Destroy(gameObject);
     }
 }

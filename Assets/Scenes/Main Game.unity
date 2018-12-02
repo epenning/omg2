@@ -347,6 +347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489539e70da974253994b29147eb58d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planePrefab: {fileID: 1667772007117108, guid: 6c31554d72483794190959569b337bb1,
+    type: 2}
+  obstaclePrefab: {fileID: 0}
   root: {fileID: 1400325612}
   plane: {fileID: 1872221329}
   obstacle: {fileID: 0}
