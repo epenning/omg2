@@ -198,6 +198,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f280a7fb47f46f69f91ad26e6c1b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelNumber: 0
+  firstObstacles:
+  - {fileID: 1643789958236238, guid: 35b98c05ab4526b4383b9730f3193a24, type: 2}
+  - {fileID: 1727432095207392, guid: 148a1d0ae6969ff41bcda9dddf8e405d, type: 2}
   planePrefab: {fileID: 1667772007117108, guid: 6c31554d72483794190959569b337bb1,
     type: 2}
   obstaclePrefabs:

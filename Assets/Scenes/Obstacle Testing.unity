@@ -156,6 +156,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114876966404124052, guid: 148a1d0ae6969ff41bcda9dddf8e405d,
+        type: 2}
+      propertyPath: maxDeceleration
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148a1d0ae6969ff41bcda9dddf8e405d, type: 2}
   m_IsPrefabAsset: 0
@@ -489,6 +494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f280a7fb47f46f69f91ad26e6c1b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelNumber: 0
+  firstObstacles: []
   planePrefab: {fileID: 1667772007117108, guid: 6c31554d72483794190959569b337bb1,
     type: 2}
   obstaclePrefabs: []
