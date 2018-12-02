@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour {
 
+    public float maxSpeed = -4;
     public float speed = 0;
     public float deceleration = 0;
 
@@ -26,5 +27,10 @@ public class Car : MonoBehaviour {
     private void OnMouseDown()
     {
         deceleration = 0.1f;
+    }
+
+    public void StartMoving()
+    {
+        speed = maxSpeed;
     }
 }
