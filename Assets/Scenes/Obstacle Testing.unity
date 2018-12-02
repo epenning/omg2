@@ -361,6 +361,11 @@ Prefab:
       propertyPath: m_Center.z
       value: -7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114091273025335764, guid: dd00750cd917acb49994bd012a0a9910,
+        type: 2}
+      propertyPath: maxDeceleration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd00750cd917acb49994bd012a0a9910, type: 2}
   m_IsPrefabAsset: 0
@@ -412,6 +417,11 @@ Prefab:
         type: 2}
       propertyPath: m_Center.z
       value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250144540522432, guid: 4c820ecf83dccd448a2f272ace5130fa,
+        type: 2}
+      propertyPath: maxDeceleration
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c820ecf83dccd448a2f272ace5130fa, type: 2}
