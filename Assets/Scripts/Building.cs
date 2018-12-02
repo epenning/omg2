@@ -6,6 +6,6 @@ public class Building : MonoBehaviour {
 
     private void OnMouseDown()
     {
-            GetComponent<Deadly>().enabled = false;
+        Destroy(gameObject);
     }
 }
