@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelController : MonoBehaviour {
 
     private static readonly System.Random random = new System.Random();
+    public float speedMultiplier = 1;
 
     public int levelNumber = 0;
     public List<GameObject> firstObstacles;
@@ -22,6 +23,11 @@ public class LevelController : MonoBehaviour {
         nextLevelRoot.transform.SetPositionAndRotation(newPosition, Quaternion.identity);
         Level nextLevel = nextLevelRoot.AddComponent<Level>();
         nextLevel.CreateLevel(planePrefab, obstaclePrefab);
+
+        if (levelNumber % 5 == 0)
+        {
+            GameTime.timeMultiplier += 0.5f;
+        }
     }
 
     public Vector3 GetNewPosition(Level currentLevel)
@@ -34,9 +40,9 @@ public class LevelController : MonoBehaviour {
     public GameObject PickObstacle()
     {
         int obstacleIndex = levelNumber - 1;
-        if (obstacleIndex >= 0 && obstaclePrefabs.Count > obstacleIndex)
+        if (obstacleIndex >= 0 && firstObstacles.Count > obstacleIndex)
         {
-            return obstaclePrefabs[obstacleIndex];
+            return firstObstacles[obstacleIndex];
         }
 
         if (obstaclePrefabs.Count == 0)
