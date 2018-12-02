@@ -7,9 +7,9 @@ public class Restart : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        Debug.Log("entered");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+        if (other.gameObject.CompareTag("Deadly")) { 
+            Debug.Log("entered");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
