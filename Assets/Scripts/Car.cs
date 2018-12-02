@@ -7,6 +7,7 @@ public class Car : MonoBehaviour {
     public float maxSpeed = -4;
     public float speed = 0;
     public float deceleration = 0;
+    public float maxDeceleration = 0.1f;
 
     void Update()
     {
@@ -26,7 +27,7 @@ public class Car : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        deceleration = 0.1f;
+        deceleration = maxDeceleration;
     }
 
     public void StartMoving()
