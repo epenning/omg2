@@ -198,6 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f280a7fb47f46f69f91ad26e6c1b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelsPerSpeedIncrease: 5
+  speedIncreaseIncrement: 0.5
   levelNumber: 0
   firstObstacles:
   - {fileID: 1643789958236238, guid: 35b98c05ab4526b4383b9730f3193a24, type: 2}
@@ -215,6 +217,8 @@ MonoBehaviour:
   - {fileID: 1763677164164956, guid: faf821fc7c2898743b9572e65b18e46d, type: 2}
   - {fileID: 1766747881236034, guid: 4ecbcf06e07a39e4d852841ca77f4404, type: 2}
   - {fileID: 1853015864018016, guid: c03959787bbcd9c41b4b141ec0a1a611, type: 2}
+  - {fileID: 1959288614339978, guid: dad31023ff05746c58098eda933fe8c5, type: 2}
+  - {fileID: 1959288614339978, guid: dad31023ff05746c58098eda933fe8c5, type: 2}
 --- !u!4 &1308407775
 Transform:
   m_ObjectHideFlags: 0
@@ -313,6 +317,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4314738227442972, guid: daa0d95c6259af148b9d55bc3f89e967, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108477626234432376, guid: daa0d95c6259af148b9d55bc3f89e967,
+        type: 2}
+      propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
