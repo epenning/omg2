@@ -17,7 +17,7 @@ public class BananaPeel : MonoBehaviour {
         float newMouseX = GetMouseX();
         float mouseXChange = newMouseX - mouseX;
 
-        transform.Translate(Vector3.right * Time.deltaTime * mouseXChange);
+        transform.Translate(Vector3.right * GameTime.deltaTime * mouseXChange);
 
         mouseX = newMouseX;
     }

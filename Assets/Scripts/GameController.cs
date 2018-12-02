@@ -31,14 +31,14 @@ public class GameController : MonoBehaviour {
     public void PauseGame()
     {
         paused = true;
-        Time.timeScale = 0;
+        GameTime.paused = true;
         pauseMenu.SetActive(true);
     }
 
     public void ContinueGame()
     {
         paused = false;
-        Time.timeScale = 1;
+        GameTime.paused = false;
         pauseMenu.SetActive(false);
     }
 
