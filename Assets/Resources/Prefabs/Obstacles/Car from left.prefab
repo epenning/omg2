@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 4592422069835970}
   - component: {fileID: 65403569103914024}
   - component: {fileID: 114584737504809262}
+  - component: {fileID: 114121217145347494}
   m_Layer: 0
   m_Name: Car
   m_TagString: Deadly
@@ -243,6 +244,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 50, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: -15}
+--- !u!114 &114121217145347494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328795927546498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29a8737038f52648801a8024e52309c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114584737504809262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,6 +269,7 @@ MonoBehaviour:
   maxSpeed: 4
   speed: 0
   deceleration: 0
+  maxDeceleration: 0.1
 --- !u!114 &114880523010587712
 MonoBehaviour:
   m_ObjectHideFlags: 1

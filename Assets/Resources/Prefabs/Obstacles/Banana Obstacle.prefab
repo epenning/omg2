@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4728679353532442}
   - component: {fileID: 114675059592106786}
   - component: {fileID: 65762254153851332}
+  - component: {fileID: 114057491542228012}
   m_Layer: 0
   m_Name: banana peel
   m_TagString: Deadly
@@ -112,6 +113,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114057491542228012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1098518973059414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29a8737038f52648801a8024e52309c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114675059592106786
 MonoBehaviour:
   m_ObjectHideFlags: 1

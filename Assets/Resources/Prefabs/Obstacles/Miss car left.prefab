@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 4878785792222166}
   - component: {fileID: 65498193958834966}
   - component: {fileID: 114583616226117026}
+  - component: {fileID: 114618099877514930}
   m_Layer: 0
   m_Name: Car
   m_TagString: Deadly
@@ -270,6 +271,17 @@ MonoBehaviour:
   speed: 0
   deceleration: 0
   maxDeceleration: 0.2
+--- !u!114 &114618099877514930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1580971306981224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29a8737038f52648801a8024e52309c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212739788695875486
 SpriteRenderer:
   m_ObjectHideFlags: 1

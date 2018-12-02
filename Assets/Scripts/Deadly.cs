@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour {
+public class Deadly : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Deadly")) { 
+        if (other.gameObject.CompareTag("Player")) { 
             SceneManager.LoadScene(0);
         }
     }
