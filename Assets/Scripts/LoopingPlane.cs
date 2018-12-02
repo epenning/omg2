@@ -10,7 +10,8 @@ public class LoopingPlane : MonoBehaviour {
         {
             //when you enter the game we want to copy the plane forward so there is a consistent loop of the plane.
             Vector3 oldPosition = gameObject.transform.position;
-            Vector3 newPosition = new Vector3(oldPosition.x, oldPosition.y, oldPosition.z + 100);
+            float length = 10 * gameObject.transform.localScale.z;
+            Vector3 newPosition = new Vector3(oldPosition.x, oldPosition.y, oldPosition.z + length);
             Object.Instantiate(gameObject, newPosition, gameObject.transform.rotation);
         }
     }
