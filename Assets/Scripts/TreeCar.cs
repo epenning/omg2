@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour {
+public class TreeCar : MonoBehaviour {
 
     private void OnMouseDown()
     {
-            GetComponent<Deadly>().enabled = false;
+        
     }
 }
