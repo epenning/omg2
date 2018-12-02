@@ -5,7 +5,8 @@ using UnityEngine;
 public class LevelController : MonoBehaviour {
 
     private static readonly System.Random random = new System.Random();
-    public float speedMultiplier = 1;
+    public int levelsPerSpeedIncrease = 5;
+    public float speedIncreaseIncrement = 0.5f;
 
     public int levelNumber = 0;
     public List<GameObject> firstObstacles;
@@ -24,9 +25,9 @@ public class LevelController : MonoBehaviour {
         Level nextLevel = nextLevelRoot.AddComponent<Level>();
         nextLevel.CreateLevel(planePrefab, obstaclePrefab);
 
-        if (levelNumber % 5 == 0)
+        if (levelNumber % levelsPerSpeedIncrease == 0)
         {
-            GameTime.timeMultiplier += 0.5f;
+            GameTime.timeMultiplier += speedIncreaseIncrement;
         }
     }
 
