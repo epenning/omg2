@@ -471,20 +471,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114545432104403912, guid: 97336a50e03b63a4c85475ae13703ef0,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 506269943}
     - target: {fileID: 114917420521718818, guid: 97336a50e03b63a4c85475ae13703ef0,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 506269943}
-    - target: {fileID: 1775074521369114, guid: 97336a50e03b63a4c85475ae13703ef0, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 114545432104403912, guid: 97336a50e03b63a4c85475ae13703ef0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 506269943}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97336a50e03b63a4c85475ae13703ef0, type: 2}
   m_IsPrefabAsset: 0
