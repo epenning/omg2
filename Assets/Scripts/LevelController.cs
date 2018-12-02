@@ -6,11 +6,15 @@ public class LevelController : MonoBehaviour {
 
     private static readonly System.Random random = new System.Random();
 
+    public int levelNumber = 0;
+    public List<GameObject> firstObstacles;
+
     public GameObject planePrefab;
     public List<GameObject> obstaclePrefabs;
 
 	public void SpawnNextLevel(Level currentLevel)
     {
+        levelNumber++;
         Vector3 newPosition = GetNewPosition(currentLevel);
         GameObject obstaclePrefab = PickObstacle();
 
@@ -29,6 +33,12 @@ public class LevelController : MonoBehaviour {
 
     public GameObject PickObstacle()
     {
+        int obstacleIndex = levelNumber - 1;
+        if (obstacleIndex >= 0 && obstaclePrefabs.Count > obstacleIndex)
+        {
+            return obstaclePrefabs[obstacleIndex];
+        }
+
         if (obstaclePrefabs.Count == 0)
         {
             return null;
