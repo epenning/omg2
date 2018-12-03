@@ -7,6 +7,8 @@ public class Building : MonoBehaviour {
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        GameObject.Instantiate(Resources.Load("Prefabs/Broke") , transform.parent);
+
 
         AudioSource audioSource = gameObject.transform.parent.gameObject.AddComponent<AudioSource>();
         audioSource.clip = Resources.Load("SFX/Explosion 2") as AudioClip;
