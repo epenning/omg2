@@ -25,13 +25,26 @@ public class Car : MonoBehaviour {
         transform.Translate(Vector3.right * GameTime.deltaTime * speed);
     }
 
-    private void OnMouseDown()
+    private void OnTriggerEnter(Collider other)
     {
-        deceleration = maxDeceleration;
+        if (other.CompareTag("Tree"))
+        {
+            Crash();
+        }
     }
 
     public void StartMoving()
     {
         speed = maxSpeed;
+    }
+
+    private void OnMouseDown()
+    {
+        Crash();
+    }
+
+    public void Crash()
+    {
+        deceleration = maxDeceleration;
     }
 }
