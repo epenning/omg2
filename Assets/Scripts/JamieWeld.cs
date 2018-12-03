@@ -44,5 +44,11 @@ public class JamieWeld : MonoBehaviour {
 
         Camera camera = FindObjectOfType<Camera>();
         camera.gameObject.transform.SetParent(gameObject.transform.parent);
+
+        GetComponent<AudioSource>().Stop();
+
+        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SFX/Death") as AudioClip;
+        audioSource.Play();
     }
 }
