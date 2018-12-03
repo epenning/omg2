@@ -10,6 +10,14 @@ public class TreeCar : MonoBehaviour
     private bool falling;
     private bool fallen;
 
+    private void Start()
+    {
+        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SFX/bird") as AudioClip;
+        audioSource.volume = .8f;
+        audioSource.Play();
+    }
+
     private void Update()
     {
         if (falling)
@@ -35,6 +43,12 @@ public class TreeCar : MonoBehaviour
         if (!fallen)
         {
             falling = true;
+
+            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = Resources.Load("SFX/tree") as AudioClip;
+            audioSource.volume = .8f;
+            audioSource.Play();
         }
+    
     }
 }

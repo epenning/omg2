@@ -29,6 +29,7 @@ public class Car : MonoBehaviour {
     {
         if (other.CompareTag("Tree"))
         {
+            maxDeceleration = 1000;
             Crash();
         }
     }
@@ -46,5 +47,14 @@ public class Car : MonoBehaviour {
     public void Crash()
     {
         deceleration = maxDeceleration;
+
+        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SFX/Explosion 1") as AudioClip;
+        audioSource.Play();
+
+        AudioSource audioSource2 = gameObject.AddComponent<AudioSource>();
+        audioSource2.clip = Resources.Load("SFX/Scream") as AudioClip;
+        audioSource2.Play();
     }
 }
+
