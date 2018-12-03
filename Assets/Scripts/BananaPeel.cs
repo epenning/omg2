@@ -10,6 +10,10 @@ public class BananaPeel : MonoBehaviour {
     private void OnMouseDown()
     {
         mouseX = GetMouseX();
+
+        AudioSource audioSource = gameObject.transform.parent.gameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SFX/Banana") as AudioClip;
+        audioSource.Play();
     }
 
     private void OnMouseDrag()

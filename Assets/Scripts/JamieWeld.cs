@@ -15,6 +15,7 @@ public class JamieWeld : MonoBehaviour {
     private void Start()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
+
     }
 
     void Update () {

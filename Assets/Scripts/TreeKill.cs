@@ -35,6 +35,11 @@ public class TreeKill : MonoBehaviour {
         if (!fallen)
         {
             falling = true;
+
+            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = Resources.Load("SFX/tree") as AudioClip;
+            audioSource.volume = .8f;
+            audioSource.Play();
         }
     }
 }
