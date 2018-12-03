@@ -9,7 +9,14 @@ public class Deadly : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player")) {
             GameTime.timeMultiplier = 1;
-            SceneManager.LoadScene(0);
+            StartCoroutine(Restart());
+            other.GetComponent<JamieWeld>().Die();
         }
+    }
+
+    private IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
     }
 }
